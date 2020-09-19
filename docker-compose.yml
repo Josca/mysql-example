@@ -5,8 +5,17 @@ services:
     image: mysql:8.0.21
     ports:
       - 3306:3306
+    volumes:
+      - ./mysql-init-files:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: passwd
       MYSQL_DATABASE: db
       MYSQL_USER: user
       MYSQL_PASSWORD: passwd
+    security_opt:
+      - label=disable
+
+  adminer:
+    image: adminer:4.7.7
+    ports:
+      - 8888:8080
