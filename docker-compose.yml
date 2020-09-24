@@ -19,3 +19,9 @@ services:
     image: adminer:4.7.7
     ports:
       - 8888:8080
+
+  ubuntu:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile
+    command: ["sleep", "infinity"]

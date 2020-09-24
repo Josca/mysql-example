@@ -9,6 +9,10 @@ Terminal 2:
 docker-compose exec db bash # connect to container
 mysql -u user --database db -p # login
 select * from customer;
+
+# or from ubuntu container:
+docker-compose exec ubuntu bash
+mysql -u user --database db -h db -p
 ~~~
 
 Connect to adminer web console:
