@@ -12,4 +12,4 @@ select * from customer;
 ~~~
 
 Connect to adminer web console:
-<http://localhost:8888>
+<http://localhost:8888/?server=db&username=user&db=db>
